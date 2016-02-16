@@ -1,0 +1,279 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CalculatorApp
+{
+    public partial class Form1 : Form
+    {
+
+
+        static double numberOne;
+        static double numberTwo;
+        static double result;
+        static char selectedOperator;
+
+        public Form1()
+        {
+            InitializeComponent();
+            txtResult.Text = "";
+        }
+
+        private void btnEquals_Click(object sender, EventArgs e)
+        {
+
+            calculate();
+        }
+
+
+
+        private void numberPressed()
+        {
+
+        }
+
+
+        private void calculate()
+        {
+            numberTwo = Convert.ToDouble(txtResult.Text);
+            txtResult.Text = "";
+            if (selectedOperator == '/')
+            {
+
+                try
+                {
+                    result = numberOne / numberTwo;
+                    txtResult.Text += result;
+                    numberOne = result;
+                }
+                catch (ArithmeticException e)
+                {
+                    Console.WriteLine("Cannot divide by zero");
+                    Console.WriteLine(e.StackTrace);
+                }
+                            
+            }
+            else if (selectedOperator == '+')
+            {
+                result = numberOne + numberTwo;
+                txtResult.Text += result;
+                numberOne = result;
+            }
+            else if (selectedOperator == '-')
+            {
+                result = numberOne - numberTwo;
+                txtResult.Text += result;
+                numberOne = result;
+            }
+            else if (selectedOperator == '%')
+            {
+                result = numberOne % numberTwo;
+                txtResult.Text += result;
+                numberOne = result;
+            }
+
+            else
+            {
+                result = numberOne * numberTwo;
+                txtResult.Text += result;
+                numberOne = result;
+            }
+
+        }
+    
+        private void btnZero_Click(object sender, EventArgs e)
+        {
+            if ((txtResult.Text == "+") || (txtResult.Text == "-") || (txtResult.Text == "*") || (txtResult.Text == "/") || (txtResult.Text == "%"))
+            {
+                txtResult.Text = "";
+                txtResult.Text = txtResult.Text + btnZero.Text;
+            }
+            else
+            {
+                txtResult.Text = txtResult.Text + btnZero.Text;
+            }
+        }
+
+        private void btnTwo_Click(object sender, EventArgs e)
+        {
+            if ((txtResult.Text == "+") || (txtResult.Text == "-") || (txtResult.Text == "*") || (txtResult.Text == "/") || (txtResult.Text == "%"))
+            {
+                txtResult.Text = "";
+                txtResult.Text = txtResult.Text + btnTwo.Text;
+            }
+            else
+            {
+                txtResult.Text = txtResult.Text + btnTwo.Text;
+            }
+        }
+
+        private void btnThree_Click(object sender, EventArgs e)
+        {
+            if ((txtResult.Text == "+") || (txtResult.Text == "-") || (txtResult.Text == "*") || (txtResult.Text == "/") || (txtResult.Text == "%"))
+            {
+                txtResult.Text = "";
+                txtResult.Text = txtResult.Text + btnThree.Text;
+            }
+            else
+            {
+                txtResult.Text = txtResult.Text + btnThree.Text;
+            }
+        }
+
+        private void btnFour_Click(object sender, EventArgs e)
+        {
+            if ((txtResult.Text == "+") || (txtResult.Text == "-") || (txtResult.Text == "*") || (txtResult.Text == "/") || (txtResult.Text == "%"))
+            {
+                txtResult.Text = "";
+                txtResult.Text = txtResult.Text + btnFour.Text;
+            }
+            else
+            {
+                txtResult.Text = txtResult.Text + btnFour.Text;
+            }
+        }
+
+        private void btnFive_Click(object sender, EventArgs e)
+        {
+            if ((txtResult.Text == "+") || (txtResult.Text == "-") || (txtResult.Text == "*") || (txtResult.Text == "/") || (txtResult.Text == "%"))
+            {
+                txtResult.Text = "";
+                txtResult.Text = txtResult.Text + btnFive.Text;
+            }
+            else
+            {
+                txtResult.Text = txtResult.Text + btnFive.Text;
+            }
+        }
+
+        private void btnSix_Click(object sender, EventArgs e)
+        {
+            if ((txtResult.Text == "+") || (txtResult.Text == "-") || (txtResult.Text == "*") || (txtResult.Text == "/") || (txtResult.Text == "%"))
+            {
+                txtResult.Text = "";
+                txtResult.Text = txtResult.Text + btnSix.Text;
+            }
+            else
+            {
+                txtResult.Text = txtResult.Text + btnSix.Text;
+            }
+        }
+
+        private void btnSeven_Click(object sender, EventArgs e)
+        {
+            if ((txtResult.Text == "+") || (txtResult.Text == "-") || (txtResult.Text == "*") || (txtResult.Text == "/") || (txtResult.Text == "%"))
+            {
+                txtResult.Text = "";
+                txtResult.Text = txtResult.Text + btnSeven.Text;
+            }
+            else
+            {
+                txtResult.Text = txtResult.Text + btnSeven.Text;
+            }
+        }
+
+        private void btnEight_Click(object sender, EventArgs e)
+        {
+            if ((txtResult.Text == "+") || (txtResult.Text == "-") || (txtResult.Text == "*") || (txtResult.Text == "/") || (txtResult.Text == "%"))
+            {
+                txtResult.Text = "";
+                txtResult.Text = txtResult.Text + btnEight.Text;
+            }
+            else
+            {
+                txtResult.Text = txtResult.Text + btnEight.Text;
+            }
+        }
+
+        private void btnNine_Click(object sender, EventArgs e)
+        {
+            if ((txtResult.Text == "+") || (txtResult.Text == "-") || (txtResult.Text == "*") || (txtResult.Text == "/") || (txtResult.Text == "%"))
+            {
+                txtResult.Text = "";
+                txtResult.Text = txtResult.Text + btnNine.Text;
+            }
+            else
+            {
+                txtResult.Text = txtResult.Text + btnNine.Text;
+            }
+        }
+
+        private void btnOne_Click(object sender, EventArgs e)
+        {
+            if ((txtResult.Text == "+") || (txtResult.Text == "-") || (txtResult.Text == "*") || (txtResult.Text == "/") || (txtResult.Text == "%"))
+            {
+                txtResult.Text = "";
+                txtResult.Text = txtResult.Text + btnOne.Text;
+            }
+            else
+            {
+                txtResult.Text = txtResult.Text + btnOne.Text;
+            }
+        }
+
+        private void btnAddition_Click(object sender, EventArgs e)
+        {
+            numberOne = Convert.ToDouble(txtResult.Text);
+            txtResult.Text = "";
+            selectedOperator = '+';
+            txtResult.Text += selectedOperator;
+        }
+
+        private void btnSubtraction_Click(object sender, EventArgs e)
+        {
+            numberOne = Convert.ToDouble(txtResult.Text);
+            txtResult.Text = "";
+            selectedOperator = '-';
+            txtResult.Text += selectedOperator;
+        }
+
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            numberOne = Convert.ToDouble(txtResult.Text);
+            txtResult.Text = "";
+            selectedOperator = '*';
+            txtResult.Text += selectedOperator;
+        }
+
+        private void btnDivision_Click(object sender, EventArgs e)
+        {
+            numberOne = Convert.ToDouble(txtResult.Text);
+            txtResult.Text = "";
+            selectedOperator = '/';
+            txtResult.Text += selectedOperator;
+        }
+
+        private void btnModulus_Click(object sender, EventArgs e)
+        {
+            numberOne = Convert.ToDouble(txtResult.Text);
+            txtResult.Text = "";
+            selectedOperator = '%';
+            txtResult.Text += selectedOperator;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtResult.Text = "";
+        }
+
+        private void btnDecimal_Click(object sender, EventArgs e)
+        {
+            if ((txtResult.Text == "+") || (txtResult.Text == "-") || (txtResult.Text == "*") || (txtResult.Text == "/"))
+            {
+                txtResult.Text = "";
+                txtResult.Text = txtResult.Text + btnDecimal.Text;
+            }
+            else
+            {
+                txtResult.Text = txtResult.Text + btnDecimal.Text;
+            }
+        }
+    }
+}
+
